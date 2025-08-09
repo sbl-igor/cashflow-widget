@@ -60,6 +60,22 @@ p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
     transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
 .btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+.btn:active {
+  background: rgba(130, 241, 212, 0.3);
+  transform: translateY(2px);
+  box-shadow: 0 4px 15px rgba(2,6,23,0.4);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.3s ease;
+}
+
+a.btn div:nth-of-type(2) {
+    transition: all 0.2s ease-in-out;
+}
+
+a.btn:hover div:nth-of-type(2) {
+    margin-left: 8px;
+}
+
 .btn:active{transform:translateY(-1px)}
 
 .btn .icon{
@@ -76,3 +92,4 @@ p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
 .btn span{display:block;font-size:12px;color:var(--muted)}
 
 .small{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+

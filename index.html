@@ -57,36 +57,34 @@
       </a>
 
       <!-- Website -->
-      <a class="btn" href="https://yoursite.com" target="_blank" rel="noopener noreferrer">
+      <a class="btn" href="https://cashflow-exchange.netlify.app/" target="_blank" rel="noopener noreferrer">
         <div class="icon" aria-hidden="true">
-          <!-- Globe SVG -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm5.93 11h-3.31a15.3 15.3 0 010 2h2.68a8 8 0 01-2.05 3.9A16.2 16.2 0 0017.93 13zM12 4.07c.86 1.1 1.5 2.64 1.85 4.43H10.15C10.5 6.71 11.14 5.17 12 4.07zM6.07 11h3.31a15.3 15.3 0 010 2H6.7a8 8 0 01-2.05-3.9A16.2 16.2 0 006.07 11zM4.07 13h2.68a15.3 15.3 0 010-2H4.07a8 8 0 000 2zM12 19.93c-.86-1.1-1.5-2.64-1.85-4.43h3.7c-.35 1.79-.99 3.33-1.85 4.43z" fill="currentColor"/>
-          </svg>
+          <img class="icon-social" src="./assets/img/icons/icon-web.svg" alt="icon-web">
         </div>
         <div>
           <strong>Sitio Web</strong>
-          <span>yoursite.com</span>
+          <span>cashflow-exchange.netlify.app</span>
         </div>
       </a>
 
     </section>
 
-    <p class="small">Compartir: <a href="#" style="color: #69c0aa;">Copiar enlace</a></p>
+    <p class="small">Compartir: 
+    <a id="copyLink" href="https://cashflow-widget.netlify.app/" style="color: #69c0aa;">Copiar enlace</a>
+    </p>
   </main>
 
-  <!-- Optional: простой скрипт для копирования ссылки (здесь пример) -->
   <script>
-    // Пример: скопировать текущий URL страницы
     document.querySelector('.small a').addEventListener('click', function(e){
       e.preventDefault();
       const url = window.location.href;
       navigator.clipboard?.writeText(url).then(()=>{
-        alert('Ссылка скопирована');
+        alert('Enlace copiado');
       }).catch(()=>{
-        prompt('Скопируйте ссылку вручную:', url);
+        prompt('Copiar el enlace manualmente:', url);
       })
     });
   </script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
