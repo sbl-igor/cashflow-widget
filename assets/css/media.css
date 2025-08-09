@@ -1,0 +1,20 @@
+
+@media(min-width:640px){
+    .links{grid-template-columns: repeat(2, 1fr)}
+}
+
+@media (max-width: 520px) {
+    header h1 {
+        font-size: 16px;
+    }
+    p.lead {
+        font-size: 11px;
+    }
+}
+
+/* mobile: full width big buttons */
+@media(max-width:420px){
+    .card{padding:20px;border-radius:12px}
+    .avatar{width:56px;height:56px}
+    .btn{padding:12px;border-radius:10px}
+}

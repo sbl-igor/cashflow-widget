@@ -1,0 +1,78 @@
+:root{
+    --bg1: #0f172a;
+    --bg2: #0b1220;
+    --card: rgba(255,255,255,0.04);
+    --accent: #7c3aed; /* можно поменять */
+    --text: #e6eef8;
+    --muted: rgba(230,238,248,0.7);
+    --radius: 14px;
+    --gap: 16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:var(--text);
+    background:linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px;
+}
+
+.card{
+    width:100%;
+    max-width:760px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:calc(var(--radius) + 6px);
+    padding:32px;
+    box-shadow:0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.04);
+}
+
+header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.avatar{
+    width:64px;height:64px;border-radius:12px;
+    min-width: 60px;
+    min-height: 60px;
+    display:inline-grid;place-items:center;font-weight:700;font-size:22px;color:white;
+    padding: 6px;
+}
+h1{font-size:20px;margin:0}
+p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+.icon-social {
+    width: 30px;
+    height: 30px;
+}
+
+.links{
+    display:grid;gap:var(--gap);
+    grid-template-columns: 1fr;
+    margin-top:18px;
+}
+
+.btn{
+    display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:12px;text-decoration:none;
+    background:var(--card);color:var(--text);border:1px solid rgba(255,255,255,0.03);
+    transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.btn:active{transform:translateY(-1px)}
+
+.btn .icon{
+    width:36px;
+    height:36px;
+    display:inline-grid;
+    place-items:center;
+    border-radius:8px;
+    /* background: linear-gradient(-45deg, #69c0aa, #317b0c); */
+    flex:0 0 36px
+}
+
+.btn strong{display:block;font-size:16px}
+.btn span{display:block;font-size:12px;color:var(--muted)}
+
+.small{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
